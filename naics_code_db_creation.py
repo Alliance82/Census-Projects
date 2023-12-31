@@ -22,10 +22,6 @@ nc = pd.read_excel('NAICS_CODES.xlsx', sheet_name='NAICS_CODES')
 # Stroing in a data frame and turning it into a tuple
 nc = pd.DataFrame(nc)
 
-print(nc.head())
-#nc = nc.to_numpy()
-#nc = [tuple(sub_array) for sub_array in nc]
-
 # Creating a connection to the database and creating naics table if it does not exist
 connection = sqlite3.connect('naics.db')
 cursor = connection.cursor()
