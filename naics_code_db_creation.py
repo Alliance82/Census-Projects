@@ -34,7 +34,7 @@ cursor = connection.cursor()
 try:
     cursor.execute('CREATE TABLE if not exists naics (SEQ TEXT, NAICS_CD INT, NAICS_TITLE TEXT)')
     connection.commit()
-    cursor.execute('DELETE FROM naics where id = 1')
+    cursor.execute('DELETE FROM naics')
     cursor.execute('SELECT * FROM naics')
     data = cursor.fetchall()
     print("This is the initial return from the naics.db:")
